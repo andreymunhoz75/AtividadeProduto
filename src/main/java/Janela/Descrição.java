@@ -17,6 +17,7 @@ public class Descrição extends javax.swing.JFrame {
      */
     public Descrição() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
     
         public Descrição(Produto p) {
