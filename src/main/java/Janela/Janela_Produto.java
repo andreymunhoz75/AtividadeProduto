@@ -17,7 +17,7 @@ public class Janela_Produto extends javax.swing.JFrame {
      */
     public Janela_Produto() {
         initComponents();
-        
+        this.setLocationRelativeTo(null);
     }
 
     /**
