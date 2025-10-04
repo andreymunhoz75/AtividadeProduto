@@ -8,12 +8,19 @@ package Objetos;
  *
  * @author andrey.munhoz
  */
-public class Comandos {
+public class Produto {
     private String Nome;
     private String Descricao;
     private int Quantidade;
     private Double Preco;
+
     
+   public Produto(String Nome, String Descricao, int Quantidade, Double Preco){
+       setNome(Nome);
+       setDescricao(Descricao);
+       setQuantidade(Quantidade);
+       setPreco(Preco);
+   }
     
 
     public String getNome() {

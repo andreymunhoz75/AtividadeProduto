@@ -4,17 +4,20 @@
  */
 package Janela;
 
+import Objetos.Produto;
+
 /**
  *
  * @author andrey.munhoz
  */
-public class Produto extends javax.swing.JFrame {
+public class Janela_Produto extends javax.swing.JFrame {
 
     /**
      * Creates new form Produto
      */
-    public Produto() {
+    public Janela_Produto() {
         initComponents();
+        
     }
 
     /**
@@ -137,11 +140,15 @@ public class Produto extends javax.swing.JFrame {
     }//GEN-LAST:event_jTPreçoActionPerformed
 
     private void jBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCadastrarActionPerformed
-        
+        Produto produto = new Produto(jTNome.getText(),jTDescrição.getText(),
+        Integer.parseInt(jTQuantidade.getText()), Double.parseDouble(jTPreço.getText())); 
+       
+        Descrição d = new Descrição(produto);
+        d.setVisible(true);
     }//GEN-LAST:event_jBCadastrarActionPerformed
 
     /**
-     * @param args the command line arguments
+     * @param args the commandjgjghjhjhjhrguments
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -157,20 +164,21 @@ public class Produto extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Produto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Janela_Produto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Produto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Janela_Produto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Produto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Janela_Produto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Produto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Janela_Produto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Produto().setVisible(true);
+                new Janela_Produto().setVisible(true);
             }
         });
     }
